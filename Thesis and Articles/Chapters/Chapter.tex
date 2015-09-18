@@ -64,7 +64,26 @@ text \cite{name1}.
 
 \section{Table Section}
 
-\begin{table}[h]                        
+\subsection{Table 1}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}[c]{l l l}
+\toprule
+\textbf{header1} & \textbf{header2} & \textbf{header3}\\
+\midrule
+text & text & text \\
+text & text & text \\
+text & text & text \\
+\bottomrule
+\end{tabular}
+\caption{Table}
+\end{center}
+\end{table}
+
+\subsection{Table 2}
+
+\begin{table}[H]                        
 \begin{center}		                    % center table
 \rowcolors{1}{white}{lightcyan}			% \rowcolors{<starting row>}{<odd color>}{<even color>}
 \begin{tabular}[c]{|l|c|r|}             % three columns with vertical lines
@@ -95,6 +114,6 @@ text & text & \cellcolor{yellow} text\\
 \hline \hline                           % insert two horizontal lines
 
 \end{tabular}
-\caption[Table Description]{Table Description}
+\caption{Table Description}
 \end{center}
 \end{table}
