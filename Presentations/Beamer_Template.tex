@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Beamer Presentation
+% Beamer Presentation Template
 %
-% Author Cosimo Scarcella
+% Author Cosimo Damiano Scarcella
 % Date -
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,7 +10,7 @@
 %	PACKAGES AND THEMES
 %----------------------------------------------------------------------------------------
 
-\documentclass{beamer}
+\documentclass[xcolor=table]{beamer}
 %\documentclass[handout]{beamer} %Product printable version of presentation
 
 \usepackage[utf8]{inputenc}
@@ -20,6 +20,7 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[table]{xcolor}
 \usepackage{wrapfig}
 \usepackage{float}
 \usepackage{caption}
@@ -37,55 +38,65 @@
 \linespread{1.2}
 %\pagestyle{fancy}
 \frenchspacing
+
+% Color Definition
+\definecolor{lightgray}{rgb}{0.83, 0.83, 0.83}
+\definecolor{lightblue}{rgb}{0.68, 0.85, 0.9}
+\definecolor{lightgreen}{rgb}{0.56, 0.93, 0.56}
+\definecolor{lightcyan}{rgb}{0.88, 1.0, 1.0}
+\definecolor{lightbrown}{rgb}{0.71, 0.4, 0.11}
+
 \lstset{%
-  %backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-  basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-  breaklines=true,                 % sets automatic line breaking
-  captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{black},    % comment style
-  %deletekeywords={...},            % if you want to delete keywords from the given language
-  %escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  %frame=L,                    % adds a frame around the code
+  backgroundcolor=\color{lightgray},   	% choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\scriptsize\ttfamily,   	% the size of the fonts that are used for the code
+  breakatwhitespace=false,         		% sets if automatic breaks should only happen at whitespace
+  breaklines=true,                		% sets automatic line breaking
+  captionpos=b,                    		% sets the caption-position to bottom
+  commentstyle=\color{black},    		% comment style
+  %deletekeywords={...},            	% if you want to delete keywords from the given language
+  %escapeinside={\%*}{*)},          	% if you want to add LaTeX within your code
+  extendedchars=true,              		% lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  %frame=L,                    			% adds a frame around the code
   %identifierstyle=\color{black},
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{black},       % keyword style
-  %language=bash,                 % the language of the code
-  %morekeywords={*,...},            % if you want to add more keywords to the set
-  %numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-  %numbersep=1pt,                   % how far the line-numbers are from the code
-  numberstyle=\color{black}, % the style that is used for the line-numbers
-  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-  showstringspaces=false,          % underline spaces within strings only
-  showtabs=false,                  % show tabs within strings adding particular underscores
-  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
-  stringstyle=\color{black},     % string literal style
-  tabsize=2,                       % sets default tabsize to 2 spaces
-  title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+  keepspaces=true,                 		% keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{black},       	% keyword style
+  %language=bash,                 		% the language of the code
+  %morekeywords={*,...},            	% if you want to add more keywords to the set
+  %numbers=left,                   		% where to put the line-numbers; possible values are (none, left, right)
+  %numbersep=1pt,                   	% how far the line-numbers are from the code
+  numberstyle=\color{black}, 			% the style that is used for the line-numbers
+  rulecolor=\color{black},         		% if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                		% show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          		% underline spaces within strings only
+  showtabs=false,                  		% show tabs within strings adding particular underscores
+  stepnumber=2,                    		% the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{black},     		% string literal style
+  tabsize=2,                       		% sets default tabsize to 2 spaces
+  title=\lstname,                   	% show the filename of files included with \lstinputlisting; also try caption instead of title
   xleftmargin=\parindent
 }
-\hypersetup {
-    %bookmarks=true,         % show bookmarks bar?
-    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
-    pdftoolbar=true,        % show Acrobat’s toolbar?
-    pdfmenubar=true,        % show Acrobat’s menu?
-    pdffitwindow=false,     % window fit to page when opened
-    pdfstartview={FitH},    % fits the width of the page to the window
-    pdftitle={Presentation},    % title
-    pdfauthor={Cosimo Scarcella},     % author
-    pdfsubject={Cosimo Scarcella},   % subject of the document
-    pdfcreator={Cosimo Scarcella},   % creator of the document
-    pdfproducer={Cosimo Scarcella}, % producer of the document
-    %pdfkeywords={keyword1} {key2} {key3}, % list of keywords
-    pdfnewwindow=true,      % links in new window
-    colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor=black,          % color of internal links (change box color with linkbordercolor)
-    citecolor=black,        % color of links to bibliography
-    filecolor=magenta,      % color of file links
-    urlcolor=blue           % color of external links
+\hypersetup{
+    %bookmarks=true,         				% show bookmarks bar?
+    unicode=false,          				% non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,       					% show Acrobat’s toolbar?
+    pdfmenubar=true,        				% show Acrobat’s menu?
+    pdffitwindow=false,     				% window fit to page when opened
+    pdfstartview={FitH},    				% fits the width of the page to the window
+    pdftitle={MyTitle},    					% title
+    pdfauthor={Cosimo Damiano Scarcella},  	% author
+    pdfsubject={MySubject},   				% subject of the document
+    pdfcreator={Cosimo Damiano Scarcella}, 	% creator of the document
+    pdfproducer={Cosimo Damiano Scarcella},	% producer of the document
+    %pdfkeywords={keyword1} {key2} {key3}, 	% list of keywords
+    pdfnewwindow=true,      				% links in new window
+    colorlinks=true,       					% false: boxed links; true: colored links
+    linkcolor=black,          				% color of internal links (change box color with linkbordercolor)
+    citecolor=black,        				% color of links to bibliography
+    filecolor=magenta,      				% color of file links
+    urlcolor=black           				% color of external links
 }
+
+
 \mode<presentation> {
 
 % The Beamer class comes with a number of default slide themes
@@ -154,7 +165,7 @@
 
 \title[Short title]{Full Title of the Talk} % The short title appears at the bottom of every slide, the full title is only on the title page
 
-\author{Cosimo Scarcella} % Your name
+\author{Cosimo Damiano Scarcella} % Your name
 \institute[Unibo] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
 Università di Bologna\\ % Your institution for the title page
@@ -278,18 +289,19 @@ text
 
 \end{columns}
 \end{frame}
+
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Table}
+\frametitle{Table 1}
 \begin{table}
 \begin{tabular}{l l l}
 \toprule
-\textbf{text} & \textbf{text 1} & \textbf{text 2}\\
+\textbf{header1} & \textbf{header2} & \textbf{header3}\\
 \midrule
-text 1 & text & text \\
-text 2 & text & text \\
-text 3 & text & text \\
+text & text & text \\
+text & text & text \\
+text & text & text \\
 \bottomrule
 \end{tabular}
 \caption{Table}
@@ -297,6 +309,47 @@ text 3 & text & text \\
 \end{frame}
 
 %------------------------------------------------
+
+\begin{frame}
+\frametitle{Table 2}
+\begin{table}[h]                        
+\begin{center}		                    % center table
+\rowcolors{1}{white}{lightcyan}			% \rowcolors{<starting row>}{<odd color>}{<even color>}
+\begin{tabular}[c]{|l|c|r|}             % three columns with vertical lines
+										% [b]: bottom
+										% [c]: center (default)
+										% [t]: top
+										% l: left-justified column
+										% c: centered column
+										% r: right-justified column
+										% |: vertical line
+										% ||: double vertical line
+										% p{'width'}: paragraph column with text vertically aligned at the top
+										% m{'width'}: paragraph column with text vertically aligned in the middle (requires array package)
+										% b{'width'}: paragraph column with text vertically aligned at the bottom (requires array package)
+										% \newline: start a new line within a cell (in a paragraph column)
+										% \cline{i-j}: partial horizontal line beginning in column i and ending in column j
+
+\hline                           		% inserts a horizontal line
+\rowcolor{lightblue}
+\textbf{header1} & \multicolumn{2}{c|}{\textbf{header2}}\\ % & separating columns
+\cline{2-3}
+\hline \hline                           % insert two horizontal lines
+text & text & text\\          			% \\ start new row
+\hline                                  % insert a horizontal line
+text & text & text\\          			% \\ start new row
+\hline                                  % insert a horizontal line
+text & text & \cellcolor{yellow} text\\
+\hline \hline                           % insert two horizontal lines
+
+\end{tabular}
+\caption{Table Description}
+\end{center}
+\end{table}
+\end{frame}
+
+%------------------------------------------------
+
 
 \begin{frame}
 \frametitle{Theorem}
@@ -343,7 +396,7 @@ text \cite{p1}.
 \frametitle{References}
 \footnotesize{
 \begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Cosimo, 2015]{p1} Cosimo Scarcella (2015)
+\bibitem[Cosimo, 2015]{p1} Cosimo Damiano Scarcella (2015)
 \newblock Title of the publication
 \newblock \emph{Journal Name} 12(3), 45 -- 678.
 \end{thebibliography}
