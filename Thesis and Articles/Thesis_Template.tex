@@ -15,6 +15,8 @@
 %\documentclass[12pt,a4paper, openright, twocolumn, twoside]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
+\usepackage[toc,page]{appendix}
+\usepackage{blindtext}% dummy text
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -25,7 +27,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{listings}
-\usepackage[table]{xcolor}
+\usepackage[xcdraw,usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{booktabs}
 \usepackage{indentfirst}
 \usepackage{pdfpages}
@@ -39,6 +41,7 @@
 \linespread{1.2}
 %\pagestyle{fancy}
 \frenchspacing
+\setlength{\parindent}{0em}
 
 % Color Definition
 \definecolor{lightgray}{rgb}{0.83, 0.83, 0.83}
@@ -46,35 +49,43 @@
 \definecolor{lightgreen}{rgb}{0.56, 0.93, 0.56}
 \definecolor{lightcyan}{rgb}{0.88, 1.0, 1.0}
 \definecolor{lightbrown}{rgb}{0.71, 0.4, 0.11}
+\definecolor{gainsboro}{rgb}{0.86, 0.86, 0.86}
+\definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
+\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}
+\definecolor{periwinkle}{rgb}{0.8, 0.8, 1.0}
+\definecolor{platinum}{rgb}{0.9, 0.89, 0.89}
 
 \lstset{%
-  backgroundcolor=\color{lightgray},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-  basicstyle=\scriptsize\ttfamily,      % the size of the fonts that are used for the code
+  backgroundcolor=\color{platinum},		% choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,      		% the size of the fonts that are used for the code
   breakatwhitespace=false,         		% sets if automatic breaks should only happen at whitespace
   breaklines=true,                		% sets automatic line breaking
   captionpos=b,                    		% sets the caption-position to bottom
-  commentstyle=\color{black},    		% comment style
+  commentstyle=\color{ao(english)}, 	% comment style
   %deletekeywords={...},            	% if you want to delete keywords from the given language
   %escapeinside={\%*}{*)},          	% if you want to add LaTeX within your code
   extendedchars=true,              		% lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  %frame=L,                    			% adds a frame around the code
+  %frame=single,               			% adds a frame around the code
+  %frameround=tttt,
   %identifierstyle=\color{black},
   keepspaces=true,                 		% keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{black},       	% keyword style
-  %language=bash,                 		% the language of the code
+  keywordstyle=\color{blue},       		% keyword style
+  %language=Java,                 		% the language of the code
   %morekeywords={*,...},            	% if you want to add more keywords to the set
   %numbers=left,                   		% where to put the line-numbers; possible values are (none, left, right)
   %numbersep=1pt,                   	% how far the line-numbers are from the code
-  numberstyle=\color{black}, 			% the style that is used for the line-numbers
+  numberstyle=\color{purple}, 			% the style that is used for the line-numbers
   rulecolor=\color{black},         		% if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                		% show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
   showstringspaces=false,          		% underline spaces within strings only
   showtabs=false,                  		% show tabs within strings adding particular underscores
   stepnumber=2,                    		% the step between two line-numbers. If it's 1, each line will be numbered
-  stringstyle=\color{black},     		% string literal style
+  stringstyle=\color{cornellred},     	% string literal style
   tabsize=2,                       		% sets default tabsize to 2 spaces
-  title=\lstname,                   	% show the filename of files included with \lstinputlisting; also try caption instead of title
-  xleftmargin=\parindent
+  %title=\lstname,                   	% show the filename of files included with \lstinputlisting; also try caption instead of title
+  %xleftmargin=\parindent
 }
 \hypersetup{
     %bookmarks=true,         				% show bookmarks bar?
@@ -112,7 +123,13 @@
 \newpage\null\thispagestyle{empty}\newpage %white page
 
 \frontmatter
-\pagenumbering{roman}
+\pagenumbering{Roman}
+%arabic: Arabic numerals 
+%roman: Lowercase roman numerals 
+%Roman: Uppercase roman numerals 
+%alph: Lowercase letters 
+%Alph: Uppercase letters 
+
 \begin{flushright}
 \null\vspace{\stretch{1}}
 \textit{Dedication}
